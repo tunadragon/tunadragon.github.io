@@ -1,0 +1,125 @@
+body{
+    font-family: 'Raleway', sans-serif;
+    background-image: url('https://i.imgur.com/0266iDJ.png');
+    background-size: cover;
+    background-color: cornsilk;
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+    background-position:center bottom;right;
+    margin: 30px auto;
+    width: 100%;
+}
+
+nav ul li, footer ul li{
+    display: inline;
+    margin-right: 5px;
+    padding: 0px;
+    list-style: none;
+    font-weight: bold;   
+}
+
+footer ul li a{
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    display: inline;
+    color: white;
+    padding: 7.5px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    margin: 0px;
+    list-style: none;
+    font-weight: bold; 
+    border-radius: 10px;
+}   
+
+a:hover {
+    text-decoration:none;
+	color:darkred;
+    background: rgba(255, 255, 255, 1);
+}
+
+h1{
+    text-align: center;
+    margin:50px;
+    color: darkred;
+}
+
+h2{
+    text-align: center;
+    color: white;
+    margin:50px;
+    margin-bottom: 0px;
+}
+
+p{
+    line-height: 25px;
+    word-spacing: 1px;
+}
+
+ul{
+    list-style-position: inside;
+    padding-left: 50px;
+}
+
+li{
+    margin: 0 0 5px 0;
+}
+
+hr{
+    opacity: .4;
+    border: 0; 
+    height: 1px; 
+    background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+    background-image: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+    background-image: -ms-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+    background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+}
+
+.button {
+    
+}
+
+.heading{
+    
+}
+
+.subhead {
+    margin:70px;
+    margin-bottom: 0px;
+    padding:5px;
+    background: rgba(100, 0, 0, .85);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+}
+
+.subheadfooter {
+    padding:5px;
+    background: rgba(100, 0, 0, .85);
+    border-radius: 10px;
+    margin-right: 15px;
+}
+
+.subheadfooter:hover {
+    color:white;
+    background: rgba(100, 0, 0, .85);
+}
+
+.container {
+    margin:50px;
+    margin-top: 0px;
+    padding: 30px;
+    background: rgba(255, 255, 255, .85);
+    border-radius: 10px;
+}
+
+.darkcontainer {
+    margin: 25px;
+    margin-top: 0px;
+    padding: 10px;
+    background: rgba(10, 0, 0, .85);
+    border-radius: 10px;
+}
