@@ -2,7 +2,7 @@ body{
     font-family: 'Raleway', sans-serif;
     background-image: url('https://i.imgur.com/0266iDJ.png');
     background-size: cover;
-    background-color: cornsilk;
+    background-color: black;
     background-repeat: no-repeat;
     background-attachment:fixed;
     background-position:center bottom;right;
@@ -22,7 +22,7 @@ footer ul li a{
     color: white;
 }
 
-a {
+nav a, footer a {
     text-decoration: none;
     display: inline;
     color: white;
@@ -35,7 +35,23 @@ a {
     border-radius: 10px;
 }   
 
-a:hover {
+p a {
+    text-decoration: none;
+    color: black;
+    
+}
+
+p a:hover {
+    text-decoration:none;
+	color:darkred;
+}
+
+nav a:hover {
+    text-decoration:none;
+	background-color:darkred;
+}
+
+footer a:hover {
     text-decoration:none;
 	color:darkred;
     background: rgba(255, 255, 255, 1);
@@ -120,6 +136,7 @@ hr{
     margin: 25px;
     margin-top: 0px;
     padding: 10px;
+    padding-left: 20px;
     background: rgba(10, 0, 0, .85);
     border-radius: 10px;
 }
