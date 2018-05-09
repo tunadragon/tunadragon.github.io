@@ -1,142 +1,116 @@
-body{
-    font-family: 'Raleway', sans-serif;
-    background-image: url('https://i.imgur.com/0266iDJ.png');
-    background-size: cover;
-    background-color: black;
-    background-repeat: no-repeat;
-    background-attachment:fixed;
-    background-position:center bottom;right;
-    margin: 30px auto;
+html, body {
+    margin: 0;
+    padding: 0;
     width: 100%;
 }
 
-nav ul li, footer ul li{
-    display: inline;
-    margin-right: 5px;
-    padding: 0px;
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+header {
+    width: 100%;
+    height: 100vh;
+    background: url(https://i.imgur.com/n0hD0PR.png) no-repeat 50% 50%; vertical-align: text-top;
+    background-size: cover;
+}
+
+.content {
+    width: 94%;
+    margin: 4em auto;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: justify;
+}
+
+.logo {
+    line-height: 60px;
+    position: fixed;
+    float: left;
+    margin: 16px 46px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    line-height: 60px;
+}
+
+nav ul {
+    line-height: 60px;
     list-style: none;
-    font-weight: bold;   
+    background: rgba(0, 0, 0, 0);
+    overflow: hidden;
+    color: #fff;
+    padding: 0;
+    text-align: right;
+    margin: 0;
+    padding-right: 40px;
+    transition: 1s;
 }
 
-footer ul li a{
-    color: white;
+nav.black ul {
+    background: #000;
 }
 
-nav a, footer a {
+nav ul li {
+    display: inline-block;
+    padding: 16px 40px;;
+}
+
+nav ul li a {
     text-decoration: none;
-    display: inline;
-    color: white;
-    padding: 7.5px;
-    padding-top: 3px;
-    padding-bottom: 3px;
-    margin: 0px;
-    list-style: none;
-    font-weight: bold; 
-    border-radius: 10px;
-}   
-
-p a {
-    text-decoration: none;
-    color: black;
-    
+    color: #fff;
+    font-size: 16px;
 }
 
-p a:hover {
-    text-decoration:none;
-	color:darkred;
+.menu-icon {
+    line-height: 60px;
+    width: 100%;
+    background: #000;
+    text-align: right;
+    box-sizing: border-box;
+    padding: 15px 24px;
+    cursor: pointer;
+    color: #fff;
+    display: none;
+    font-size: 2em;
 }
 
-nav a:hover {
-    text-decoration:none;
-	background-color:darkred;
-}
+@media(max-width: 786px) {
 
-footer a:hover {
-    text-decoration:none;
-	color:darkred;
-    background: rgba(255, 255, 255, 1);
-}
+    .logo {
+        position: fixed;
+        top: 0;
+        margin-top: 16px;
+    }
 
-h1{
-    text-align: center;
-    margin:50px;
-    color: darkred;
-}
+    nav ul {
+        max-height: 0px;
+        background: #000;
+    }
 
-h2{
-    text-align: center;
-    color: white;
-    margin:50px;
-    margin-bottom: 0px;
-}
+    nav.black ul {
+        background: #000;
+    }
 
-p{
-    line-height: 25px;
-    word-spacing: 1px;
-}
+    .showing {
+        max-height: 34em;
+    }
 
-ul{
-    list-style-position: inside;
-    padding-left: 50px;
-}
+    nav ul li {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 24px;
+        text-align: center;
+    }
 
-li{
-    margin: 0 0 5px 0;
-}
+    .menu-icon {
+        display: block;
+    }
 
-hr{
-    opacity: .4;
-    border: 0; 
-    height: 1px; 
-    background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
-    background-image: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
-    background-image: -ms-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
-    background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
-}
-
-.button {
-    
-}
-
-.heading{
-    
-}
-
-.subhead {
-    margin:70px;
-    margin-bottom: 0px;
-    padding:5px;
-    background: rgba(100, 0, 0, .85);
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-
-}
-
-.subheadfooter {
-    padding:5px;
-    background: rgba(100, 0, 0, .85);
-    border-radius: 10px;
-    margin-right: 15px;
-}
-
-.subheadfooter:hover {
-    color:white;
-    background: rgba(100, 0, 0, .85);
-}
-
-.container {
-    margin:50px;
-    margin-top: 0px;
-    padding: 30px;
-    background: rgba(255, 255, 255, .85);
-    border-radius: 10px;
-}
-
-.darkcontainer {
-    margin: 25px;
-    margin-top: 0px;
-    padding: 10px;
-    padding-left: 20px;
-    background: rgba(10, 0, 0, .85);
-    border-radius: 10px;
 }
