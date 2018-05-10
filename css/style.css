@@ -13,6 +13,25 @@ header {
     height: 100vh;
     background: url(https://i.imgur.com/n0hD0PR.png) no-repeat 50% 50%; vertical-align: text-top;
     background-size: cover;
+    position: relative;
+}
+
+footer {
+    width: 100%;
+    background-color: rgba(0,0,0,1);
+    padding: 40px 10px;
+}
+
+.welcome{
+    background-color: #140613;
+    color: #fff;
+    padding: 24px;
+    padding-top: 100px;
+    margin-top: -76px;
+}
+
+.welcome p {
+    line-height: 1.4;
 }
 
 .content {
@@ -32,6 +51,7 @@ header {
     font-weight: bold;
     font-size: 20px;
     letter-spacing: 2px;
+    font-size: 2em;
 }
 
 nav {
@@ -91,11 +111,11 @@ nav ul li a {
 
     nav ul {
         max-height: 0px;
-        background: #000;
+        background: rgba(0,0,0,.8);
     }
 
     nav.black ul {
-        background: #000;
+        background: rgba(0,0,0,.8);
     }
 
     .showing {
@@ -113,4 +133,23 @@ nav ul li a {
         display: block;
     }
 
+}
+
+.contact-info {
+    margin: 20px;
+    color:#fff;
+}
+
+.contact-info ul li {
+    list-style-type: none;
+    padding: 7px;
+}
+
+.contact-info ul li a {
+    text-decoration: none;
+    color:#fff;
+}
+
+ul li a:hover {
+    color: coral;
 }
