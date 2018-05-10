@@ -6,6 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+    <script>
+    $(document).ready(function(){
+      // Add smooth scrolling to all links
+      $("a").on('click', function(event) {
+
+        // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
+          // Prevent default anchor click behavior
+          event.preventDefault();
+
+          // Store hash
+          var hash = this.hash;
+
+          // Using jQuery's animate() method to add smooth page scroll
+          // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 400, function(){
+
+            // Add hash (#) to URL when done scrolling (default click behavior)
+            window.location.hash = hash;
+          });
+        } // End if
+      });
+    });
+    </script>
     
     <title>Patricia's Website</title>
     <link rel="stylesheet" href="css/style.css">
@@ -13,7 +41,7 @@
     
 <body>
     <!-- Navigation Bar -->
-    <div class="wrapper">
+    <div class="wrapper" id="home_section">
         <header>
             <nav>
                 <div class="menu-icon">
@@ -21,26 +49,93 @@
                 </div>
                 
                 <div class="logo">
-                    <img src="https://i.imgur.com/pvPE2tZ.png" alt="PL logo" width="15%", height="15%">
+                    <b>PL</b>
                 </div>
                 
                 <div class="menu">
                     <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Projects</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="#home_section">Home</a></li>
+                        <li><a href="#about_section">About</a></li>
+                        <li><a href="#WIP">Projects</a></li>
+                        <li><a href="#contact_section">Contact</a></li>
                     </ul>
                 </div>
             </nav>
         </header>
-        <div class="content">
-            <p>
-                add text
-            </p>
+        <!-- Welcome message -->
+        <div class="welcome" id="about_section">
+            <h1>Welcome to my website!</h1>
+
+            <div>
+                <p> Hello, my name is Patricia Lee and I'm a second year student at the University of Toronto. I am currently enrolled in the Specialist Co-op Program in Computer Science - Software Engineering.</p>
+
+            </div>
+
         </div>
-        
+        <div class="content">
+            
+
+            <!-- Computer Languages List -->
+            <div>
+                <h2>Programming and Markup Languages</h2>
+            <ul>
+                <li>Java</li>
+                <li>Python</li>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Javascript</li>
+            </ul>
+            </div>
+
+            <br>
+            <!-- App Software List -->
+            <h2>Application Software</h2>
+            <ul>
+                <li>Microsoft Office</li>
+                <ul>
+                    <li>Word</li>
+                    <li>Excel</li>
+                    <li>PowerPoint</li>
+                    <li>Outlook</li>
+                    <li>SharePoint</li>
+                </ul>
+                <br>
+                <li>Adobe Creative Cloud</li>
+                <ul>
+                    <li>Photoshop</li>
+                    <li>Illustrator</li>
+                    <li>InDesign</li>
+                </ul>
+                <br>
+                <li>SVN Version Control</li>
+                <li>MATLAB</li>
+                <li>Texmaker</li>
+                <li>GameMaker: Studio 1.4 Pro</li>
+                <li>Autodesk 3ds Max</li>
+            </ul>
+
+            <br>
+            <!-- Hobbies -->
+            <h2>Hobbies</h2>
+            <ul>
+                <li>Graphic Design</li>
+                <li>Illustrating</li>
+                <li>Playing and developing video games</li>
+                <li>Sewing</li>
+            </ul>
+        </div>     
     </div>
+    
+    <footer id="contact_section">
+        <div class="contact-info">
+            <h2>Contact</h2>
+            <ul>
+                <li><a href="mailto:patriciae.lee@mail.utoronto.ca">Email</a></li>
+                <li><a href="https://www.linkedin.com/in/patricia-lee-934177120/" target="_blank">LinkedIn</a></li>
+                <li><a href="https://github.com/tunadragon" target="_blank">GitHub</a></li>
+            </ul>
+        </div>
+    </footer>
     
     <script type="text/javascript">
         // menu toggle
