@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { HashLink as Link } from 'react-router-hash-link'
+import { useLocation } from 'react-router-dom'
 import './Navbar.css'
 
 function Navbar() {
@@ -18,6 +19,13 @@ function Navbar() {
     // }
 
     // window.addEventListener('resize', showButton)
+
+    const scrollWithOffset = (el) => {
+        const navbarOffset = 64;
+        const position = el.getBoundingClientRect().top + window.pageYOffset
+        const offsetPosition = position - navbarOffset
+        window.scrollTo(0, offsetPosition)
+    }
     
     const path = useLocation().pathname;
 
@@ -25,7 +33,7 @@ function Navbar() {
         <>
             <nav className='navbar'>
                 <div className='navbar-container'>
-                    <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
+                    <Link to='/#home-section' className='navbar-logo' scroll={el => scrollWithOffset(el)} onClick={closeMobileMenu}>
                         PL
                         </Link>
                     <div className='menu-icon' onClick={handleClick}>
@@ -33,19 +41,19 @@ function Navbar() {
                     </div>
                     <ul className={click ? 'nav-menu active' : 'nav-menu'}>
                         <li className="nav-item">
-                            <Link to='/' className={'nav-links' + (path === '/' ? ' active' : '')} onClick={closeMobileMenu}>
+                            <Link to='/#home-section' className={'nav-links' + (path === '/' ? ' active' : '')} scroll={el => scrollWithOffset(el)} onClick={closeMobileMenu}>
                                 Home    
                             </Link>
                         </li>
                     
                         <li className="nav-item">
-                            <Link to='/home/#about' className={'nav-links' + (path === '/about' ? ' active' : '')} onClick={closeMobileMenu}>
+                            <Link to='/#about-section' className='nav-links' scroll={el => scrollWithOffset(el)} onClick={closeMobileMenu}>
                                 About
                             </Link>
                         </li>
 
                         <li className="nav-item">
-                            <Link to='/projects' className={'nav-links' + (path === '/projects' ? ' active' : '')} onClick={closeMobileMenu}>
+                            <Link to='/projects/#programming-projects' className={'nav-links' + (path.startsWith('/projects') ? ' active' : '')} scroll={el => scrollWithOffset(el)} onClick={closeMobileMenu}>
                                 Projects
                             </Link>
                         </li>

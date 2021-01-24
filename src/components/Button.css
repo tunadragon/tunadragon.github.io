@@ -24,9 +24,15 @@
   transition: all 0.3s ease-out;
 }
 
+.btn--toggle {
+  background-color: #242424;
+  color: #fff;
+  transition: all 0.3s ease-out;
+}
+
 .btn--medium {
   padding: 8px 20px;
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .btn--large {
@@ -44,4 +50,8 @@
   background-color: rgba(255, 255, 255, 0.1);
   color: #fff;
   transition: all 0.3s ease-out;
+}
+
+.btn--dark:hover {
+  color: var(--main-color);
 }

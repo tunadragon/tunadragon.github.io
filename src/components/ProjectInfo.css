@@ -1,0 +1,21 @@
+.project-info {
+    display: flex;
+    padding-bottom: 15px;
+}
+
+.project-image {
+    width: 64px;
+}
+
+.project-image img {
+    width: 64px;
+}
+
+.project-text {
+    margin-left: 16px;
+    padding: 10px;
+}
+
+.date-text {
+    font-weight: 300;
+}
