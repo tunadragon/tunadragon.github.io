@@ -24,16 +24,12 @@
   width: 100%;
   height: 100%;
   background: #fff;
-  padding: 50px 10%;
+  padding: 45px 10% 5px 10%;
 }
 
 .article h2 {
   margin-bottom: 20px;
   color: var(--secondary-color);
-}
-
-#programming-projects {
-  padding-bottom: 0;
 }
 
 .project-image-container {
@@ -48,25 +44,35 @@
 }
 
 .embedded-game {
-  width: 800px;
+  width: 700px;
   height: 500px;
   border: 0;
 }
 
-@media screen and (max-width: 1000px) {
+.carousel {
+  width: 550px;
+  height: 550px;
+  vertical-align: middle;
+  text-align: center;
+  display: table-cell;
+  background: var(--grey);
+}
+
+.large-project-entry {
+  margin-bottom: 30px;
+}
+
+@media screen and (max-width: 700px) {
   .embedded-game {
     width: 100%;
     height: 300px;
     border: 0;
   }
-}
 
-/* Smartphones ----------- */
-@media only screen and (max-width: 760px) {
-  .game-container {
-    display: none;
+  .carousel {
+    width: 100%;
+    height: 70vw;
   }
-
 }
 
 /* .home,

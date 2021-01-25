@@ -25,7 +25,7 @@
 }
 
 .btn--toggle {
-  background-color: #242424;
+  background-color: #969696;
   color: #fff;
   transition: all 0.3s ease-out;
 }
@@ -52,6 +52,6 @@
   transition: all 0.3s ease-out;
 }
 
-.btn--dark:hover {
-  color: var(--main-color);
+.btn--toggle:hover {
+  background-color: #777;
 }

@@ -1,13 +1,70 @@
 import React, { useState } from 'react'
+import Carousel from 'react-material-ui-carousel'
 import ProjectInfo from '../ProjectInfo'
 import { Button } from '../Button'
 import '../../App.css'
 
 function Projects() {
     const [gameVis, setGameVis] = useState(false)
+    const [modelVis, setModelVis] = useState({
+        m1: false,
+        m2: false,
+        m3: false
+    })
+
+    const modelImages1 = [
+        {
+            title: "Model Turnaround",
+            img: process.env.PUBLIC_URL + "/images/3d/1_turnaround.gif"
+        },
+        {
+            title: "Model in Face-tracking Software",
+            img: process.env.PUBLIC_URL + "/images/3d/1_render.gif"
+        }
+    ]
+
+    const modelImages2 = [
+        {
+            title: "Model Turnaround",
+            img: process.env.PUBLIC_URL + "/images/3d/2_turnaround.gif"
+        },
+        {
+            title: "Rendered Animation",
+            img: process.env.PUBLIC_URL + "/images/3d/2_render.gif"
+        }
+    ]
+
+    const modelImages3 = [
+        {
+            title: "Model Turnaround",
+            img: process.env.PUBLIC_URL + "/images/3d/3_turnaround.gif"
+        },
+        {
+            title: "Posed Model",
+            img: process.env.PUBLIC_URL + "/images/3d/3_render.png"
+        }
+    ]
 
     const toggleGame = () => {
         setGameVis(!gameVis)
+    }
+
+    const toggleModelImages = (i) => {
+        setModelVis(prev => {
+            return {
+                ...prev,
+                [`m${i}`]: !prev[`m${i}`]
+            }
+        })
+    }
+
+    const isTouch = () => {
+        try{ document.createEvent("TouchEvent"); return true; }
+        catch(e){ return false; }
+    }
+
+    const isMobile = () => {
+        return (window.innerWidth <= 760) && isTouch() ;
     }
 
     return (
@@ -78,7 +135,7 @@ function Projects() {
                         link="https://simmer.io/@tunadragon/~4a585bea-aa40-e790-a7a5-778cd61deb81"
                         linkText="simmer.io link"
                     />
-                    <div className="game-container">
+                    {/* {!isMobile() ? <div className="game-container">
                         <Button className="btns" buttonStyle='btn--toggle' buttonSize='btn--medium' onClick={toggleGame}>
                             { gameVis ? "Hide Game" : "Show Game"}
                         </Button>
@@ -86,32 +143,34 @@ function Projects() {
                             src="https://i.simmer.io/@tunadragon/~4a585bea-aa40-e790-a7a5-778cd61deb81" 
                             style={{display:(gameVis ? "block" : "none")}}>
                         </iframe>
-                    </div>
+                    </div> : ""} */}
                </div>
            </div>
 
            <div id="3d-projects" className="article">
                <h2>3D MODELLING</h2>
-               <div>
+               <div className="large-project-entry">
                     <ProjectInfo 
-                        title="Rainey" 
-                        description="A 3D model of an original character named Rainey. Used Unity VRM to make model compatible with VR applications."
+                        title="Original Character" 
+                        description="A 3D model of an original character. Used Unity VRM to make model compatible with VR applications."
                         img={process.env.PUBLIC_URL + "/images/icons/blender_icon.png"}
                         date="January 2021"
                         tools="Blender, Unity"
                         link=""
                         linkText=""
                     />
-                    {/* <Button className="btns" buttonStyle='btn--toggle' buttonSize='btn--medium' onClick={toggleGame}>
-                        { gameVis ? "See more" : "Hide"}
+                    <Button className="btns" buttonStyle='btn--toggle' buttonSize='btn--medium' onClick={() => {toggleModelImages(1)}}>
+                            { modelVis.m1 ? "Hide" : "Show More"}
                     </Button>
-                    <div className="project-image-container">
-                        <img src={process.env.PUBLIC_URL + "/images/3d/1_turnaround.gif"}></img>
-                        <img src={process.env.PUBLIC_URL + "/images/3d/1_render.gif"}></img>
-                    </div> */}
+                    <div style={{display: modelVis.m1 ? "block" : "none"}}>
+                        <Carousel className="carousel" autoPlay={false} indicators={true} navButtonsAlwaysVisible={true}>
+                            { modelImages1.map( (item, i) => <img key={i} src={item.img} alt={item.title} width="100%" height="100%"/>) }
+                        </Carousel>        
+                    </div>
+                    
                </div>
                
-                <div>
+                <div className="large-project-entry">
                     <ProjectInfo 
                         title="Qiqi" 
                         description="A low-poly model of the character Qiqi from the video game Genshin Impact."
@@ -121,16 +180,17 @@ function Projects() {
                         link=""
                         linkText=""
                     />
-                    {/* <Button className="btns" buttonStyle='btn--toggle' buttonSize='btn--medium' onClick={toggleGame}>
-                        { gameVis ? "Hide Game" : "Show Game"}
+                    <Button className="btns" buttonStyle='btn--toggle' buttonSize='btn--medium' onClick={() => {toggleModelImages(2)}}>
+                            { modelVis.m2 ? "Hide" : "Show More"}
                     </Button>
-                    <div className="project-image-container">
-                        <img src={process.env.PUBLIC_URL + "/images/3d/2_turnaround.gif"}></img>
-                        <img src={process.env.PUBLIC_URL + "/images/3d/2_render.gif"}></img>
-                    </div> */}
+                    <div style={{display: modelVis.m2 ? "block" : "none"}}>
+                        <Carousel className="carousel" autoPlay={false} indicators={true} navButtonsAlwaysVisible={true}>
+                            { modelImages2.map( (item, i) => <img key={i} src={item.img} alt={item.title} width="100%" height="100%"/>) }
+                        </Carousel>        
+                    </div>
                 </div>
 
-                <div>
+                <div className="large-project-entry">
                     <ProjectInfo 
                         title="Low-poly Dragon" 
                         description="A low-poly model of a dragon."
@@ -140,14 +200,15 @@ function Projects() {
                         link=""
                         linkText=""
                     />
+                    <Button className="btns" buttonStyle='btn--toggle' buttonSize='btn--medium' onClick={() => {toggleModelImages(3)}}>
+                        { modelVis.m3 ? "Hide" : "Show More"}
+                    </Button>
+                    <div style={{display: modelVis.m3 ? "block" : "none"}}>
+                        <Carousel className="carousel" autoPlay={false} indicators={true} navButtonsAlwaysVisible={true}>
+                            { modelImages3.map( (item, i) => <img key={i} src={item.img} alt={item.title} width="100%" height="100%"/>) }
+                        </Carousel>        
+                    </div>
                 </div>
-                {/* <Button className="btns" buttonStyle='btn--toggle' buttonSize='btn--medium' onClick={toggleGame}>
-                    { gameVis ? "Hide Game" : "Show Game"}
-                </Button>
-                <div className="project-image-container">
-                    <img src={process.env.PUBLIC_URL + "/images/3d/3_turnaround.gif"}></img>
-                    <img src={process.env.PUBLIC_URL + "/images/3d/3_render.png"}></img>
-                </div> */}
            </div>
 
            {/* <div id="design-projects" className="article">

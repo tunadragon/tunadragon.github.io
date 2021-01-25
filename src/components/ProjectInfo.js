@@ -12,7 +12,7 @@ function ProjectInfo(props) {
                 <h3>{title}  <span className="date-text">[{date}]</span></h3>
                 {link !== '' ? <><a target="_blank" rel="noreferrer" href={link}>{linkText}</a><br/></> : ''}
                 <p>{description}</p>
-                <p>Tools used: {tools}</p>
+                <p><b>Tools used:</b> {tools}</p>
             </div>
         </div>
     )
