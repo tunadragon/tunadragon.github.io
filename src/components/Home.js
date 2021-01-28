@@ -168,7 +168,7 @@ function Home() {
                         imageUrl2={process.env.PUBLIC_URL + '/images/3d/1_render.gif'}
                         bgColor='#242424'
                         date='Jan 2021'
-                        description='A model of an original character compatible with VR apps. Made with Blender and Unity.' 
+                        description='A model of an original character, compatible with VR apps. Made with Blender and Unity.' 
                     />
                     
                     <CarouselItem 
@@ -194,7 +194,7 @@ function Home() {
                         imageUrl={process.env.PUBLIC_URL + '/images/3d/4_screencap.png'} 
                         bgColor='#242424'
                         date='March 2019'
-                        description='An endless runner game created in Unity. Art and assets were with Photoshop.' 
+                        description='An endless runner game created in Unity. Art and assets were made with Photoshop.' 
                         link='https://simmer.io/@tunadragon/~4a585bea-aa40-e790-a7a5-778cd61deb81'
                     />
                 </Carousel>
