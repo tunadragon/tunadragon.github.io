@@ -1,0 +1,20 @@
+Navbar:
+Home, About, Experience, Projects, Hobbies?
+Home: greeting message
+About Me: profile picture, name, short summary of background and education, social links, summary of skills
+Experience: work and volunteer Experience
+Projects: programming Projects
+Hobbies (carousel): game dev and 3d modelling 
+
+TO DO:
+X new branch: dev2
+X take navbar menu animation (dropdown) from "newer" version
+X add variables for css
+X temporarily disconnect components from app
+- create components:
+    X navbar
+    X skill section (e.g. programming languages, frameworks, adobe creative cloud, microsoft office, etc.)
+    X experience entry (maybe reuse for education too)
+    - carousel item (use material-ui paper - input: an image, caption that displays when hovered)
+
+tut to follow: https://www.youtube.com/watch?v=BS6blX035NM&list=WL

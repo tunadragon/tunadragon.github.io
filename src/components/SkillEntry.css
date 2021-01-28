@@ -1,0 +1,32 @@
+.skills {
+    padding: 10px;
+    line-height: 2em;
+}
+
+.skill-category {
+    padding: 5px 10px;
+    margin-right: 4px;
+    background: transparent;
+    border-radius: 20px;
+    border: solid 1px var(--primary-color-light);
+    color: var(--primary-color);
+}
+
+.skills-list {
+    margin-left: 8px;
+}
+
+/* Smartphone */
+@media screen and (max-width: 768px) {
+    .skills {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .skill-category {
+        margin-right: auto;
+        padding: 0 10px;
+    }
+    
+    
+}

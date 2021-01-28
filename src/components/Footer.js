@@ -1,27 +1,17 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import './Footer.css'
 
 function Footer() {
     return (
-        <div className="footer-container">
-            <section className="footer-links">
-                <div className="footer-link-wrapper">
-                    {/* <div className="footer-link-items">
-                        <h2>About</h2>
-                        <Link to='/'>Background</Link>
-                        <Link to='/'>Skills</Link>
-                        <Link to='/'>Projects</Link>
-                    </div> */}
-                    <div className="footer-link-items">
-                        <h2>Contact</h2>
-                        <Link to='/'><i className="far fa-envelope"></i> Email</Link>
-                        <Link to='/'><i className="fab fa-linkedin"></i> LinkedIn</Link>
-                        <Link to='/'><i className="fab fa-github"></i> Github</Link>
-                    </div>
-                </div>
-            </section>
-        </div>
+        <footer>
+            <h3>Contact Me</h3>
+            <div className='links-container'>
+                <a href='mailto: patricia.e.lee.work@gmail.com' target='_blank' rel="noreferrer"><i className="fas fa-envelope social-icon"></i></a>
+                <a href='https://linkedin.com/in/patricia-lee-934177120' target='_blank' rel="noreferrer"><i className="fab fa-linkedin social-icon"></i></a>
+                <a href='https://github.com/tunadragon' target='_blank' rel="noreferrer"><i className="fab fa-github social-icon"></i></a>
+            </div>
+            
+        </footer>
     )
 }
 
