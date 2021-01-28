@@ -2,4 +2,4 @@
 
 Created with HTML, CSS, JavaScript and React.
 
-Link: www.patriciaelee.me
+Link: https://patriciaelee.me/

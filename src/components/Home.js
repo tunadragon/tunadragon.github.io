@@ -123,7 +123,7 @@ function Home() {
                     date='January 2021' 
                     tools='React, HTML, CSS, JavaScript, Git'
                     githubLink='https://github.com/tunadragon/tunadragon.github.io'
-                    url='https://www.patriciaelee.me'>
+                    url='https://patriciaelee.me'>
                     <p>A website developed to display my skills, experience and projects.</p>
                 </ProjectEntry>
 
