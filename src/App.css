@@ -1,0 +1,127 @@
+/* FONTS */
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,900&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+/* VARIABLES */
+:root {
+  --header-height: 3rem;
+
+  /* Colour Palette */
+  --primary-color: #3E0E12;
+  --primary-color-dark: #2F0A0D;
+  --primary-color-light: #7B6F71;
+  --primary-color-lighter: #FBF9F9;
+  --background-color: #f2f2f2;
+  --text-color: #524748;
+
+  /* Typography */
+  --main-font: 'Poppins', sans-serif;
+  --large-font-size: 2.5rem;
+  --medium-font-size: 0.938rem;
+  --small-font-size: 0.813rem;
+  --xsmall-font-size: 0.75rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1.125rem;
+
+  --xlight-font-weight: 200;
+  --light-font-weight: 300;
+  --reg-font-weight: 400;
+  --medium-font-weight: 500;
+  --semibold-font-weight: 600;
+  --bold-font-weight: 700;
+
+  /* Margins (Bottom) */
+  --mb-1: 0.5rem;
+  --mb-2: 1rem;
+  --mb-3: 1.5rem;
+  --mb-4: 2rem;
+
+  /* Z-index */
+  --z-normal: 1;
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: var(--background-color);
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: var(--main-font);
+}
+
+.section {
+  padding: 6vh 10%;
+  color: var(--primary-color-dark);
+}
+
+.section-title, .section h2 {
+  font-weight: var(--medium-font-weight);
+}
+
+.section > h1 > i {
+  margin-right: 5px;
+}
+
+.section > h2 {
+  margin-top: 20px;
+  font-weight: var(--semibold-font-weight);
+}
+
+i {
+  margin-right: 5px;
+}
+
+.btn {
+  margin: 5px;
+  cursor: pointer;
+  border: none;
+  width:fit-content;
+  padding: 8px 16px;
+  margin-top: 16px;
+  font-size: var(--h3-font-size);
+}
+
+.btn-outline {
+  background: transparent;
+  color: #fff;
+  border: solid 1px #fff;
+  opacity: 0.9;
+  transition: 0.5s ease-out;
+}
+
+.btn-outline:hover {
+  background: rgba(255,255,255,0.1);
+  opacity: 1;
+}
+
+.social-icon {
+  font-size: x-large;
+  margin: 20px 10px;
+  transition: 0.2s ease-out;
+  color: var(--primary-color-light);
+}
+
+.social-icon:hover {
+  color: var(--primary-color);
+}
+
+.carousel {
+  max-width: 1024px;
+  height: auto;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+/* Smartphone */
+@media screen and (max-width: 768px) {
+  .section {
+    padding: 6vh 6%;
+  }
+}

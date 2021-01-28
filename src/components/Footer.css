@@ -1,0 +1,19 @@
+footer {
+    background: var(--primary-color-dark);
+    text-align: center;
+    color: var(--primary-color-lighter);
+    padding: 40px 0;
+}
+
+footer h3 {
+    font-weight: var(--medium-font-weight);
+}
+
+.links-container i {
+    color: var(--primary-color-lighter);
+}
+
+.links-container i:hover {
+    color: var(--primary-color-lighter);
+    opacity: 0.6;
+}
