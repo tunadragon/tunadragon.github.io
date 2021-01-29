@@ -57,6 +57,7 @@ html {
 
 .section {
   padding: 6vh 10%;
+  padding-bottom: 0;
   color: var(--primary-color-dark);
 }
 
@@ -118,6 +119,20 @@ i {
   box-shadow: 0 4px 6px rgba(0,0,0,0.2);
   border-radius: 10px;
   margin-top: 20px;
+}
+
+/* Desktop */
+@media screen and (min-width: 1025px) {
+  .section {
+    margin: 0 auto;
+    width: 80%;
+  }
+
+  .section > * {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1024px;
+  }
 }
 
 /* Smartphone */
