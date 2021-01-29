@@ -30,8 +30,10 @@ function Home() {
                 <div className='card-container'>
                     <div className='profile-pic-container'>
                         <img className='profile-pic-large' src={`${process.env.PUBLIC_URL}/images/pfp_large.jpg`} alt='Profile' />
-                        <a href='https://linkedin.com/in/patricia-lee-934177120' target='_blank' rel="noreferrer"><i className="fab fa-linkedin social-icon"></i></a>
-                        <a href='https://github.com/tunadragon' target='_blank' rel="noreferrer"><i className="fab fa-github social-icon"></i></a>
+                        <div>
+                            <a href='https://linkedin.com/in/patricia-lee-934177120' target='_blank' rel="noreferrer"><i className="fab fa-linkedin social-icon"></i></a>
+                            <a href='https://github.com/tunadragon' target='_blank' rel="noreferrer"><i className="fab fa-github social-icon"></i></a>
+                        </div>
                     </div>
                     <div className='profile-text'>
                         <h2>Patricia Lee</h2>
@@ -88,6 +90,7 @@ function Home() {
                     title='Computer-based Training Developer / eLearning Multimedia Designer (Co-op)' 
                     location='Ontario Power Generation - Pickering, Ontario' 
                     date='September 2018 - May 2019' 
+                    logo={`${process.env.PUBLIC_URL}/images/logos/opg_logo.png`}
                     separator>
                 </ExperienceEntry>
 
@@ -95,6 +98,7 @@ function Home() {
                     title='Information Security Coordinator (Co-op)' 
                     location='CIBC - Toronto, Ontario' 
                     date='January 2018 - April 2018' 
+                    logo={`${process.env.PUBLIC_URL}/images/logos/cibc_logo.jpg`}
                     separator>
                 </ExperienceEntry>
 
@@ -102,6 +106,7 @@ function Home() {
                     title='Co-op Student' 
                     location='Fish Out of Water Design - Toronto, Ontario' 
                     date='September 2016 - December 2020' 
+                    logo={`${process.env.PUBLIC_URL}/images/logos/fish_logo.png`}
                     separator>
                 </ExperienceEntry>
 
@@ -112,6 +117,7 @@ function Home() {
                     title='Volunteer Note Taker' 
                     location='UofT Accessibility Services - Toronto, Ontario' 
                     date='September 2016 - May 2017' 
+                    logo={`${process.env.PUBLIC_URL}/images/logos/uoft_logo.png`}
                     separator>
                 </ExperienceEntry>
             </div>
