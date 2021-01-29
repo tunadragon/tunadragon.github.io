@@ -93,6 +93,7 @@ i {
   border: solid 1px #fff;
   opacity: 0.9;
   transition: 0.5s ease-out;
+  border-radius: 10px;
 }
 
 .btn-outline:hover {

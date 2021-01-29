@@ -66,7 +66,7 @@ function Home() {
                         {/* <h3>Programming</h3> */}
                         <SkillEntry category='Programming Languages'>Java, JavaScript, Python, Haskell</SkillEntry>
                         <SkillEntry category='Markup and Style Sheet'>HTML, CSS, XML </SkillEntry>
-                        <SkillEntry category='Web Development Frameworks'>React, Angular, jQuery, Express </SkillEntry>
+                        <SkillEntry category='Web Development Frameworks'>React, Angular, jQuery, Node.js, Express.js </SkillEntry>
                         <SkillEntry category='Databases'>PostgreSQL, MongoDB </SkillEntry>
                         <SkillEntry category='Development Concepts'>Agile workflows (Scrum and Kanban), RESTful API, Responsive design </SkillEntry>
                         <SkillEntry category='Version Control'>Git, SVN </SkillEntry>
@@ -148,7 +148,7 @@ function Home() {
                 <ProjectEntry 
                     title='The Web Gallery' 
                     date='February 2020' 
-                    tools='HTML, CSS, Node.js, Express, NeDB NoSQL database'
+                    tools='HTML, CSS, Node.js, Express.js, NeDB NoSQL database'
                     githubLink=''
                     url=''>
                     <p>A local web app where users can share photos and comments.</p>
