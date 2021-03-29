@@ -105,7 +105,7 @@ function Home() {
                 <ExperienceEntry 
                     title='Co-op Student' 
                     location='Fish Out of Water Design - Toronto, Ontario' 
-                    date='September 2016 - December 2020' 
+                    date='October 2015 - May 2016' 
                     logo={`${process.env.PUBLIC_URL}/images/logos/fish_logo.png`}
                     separator>
                 </ExperienceEntry>
