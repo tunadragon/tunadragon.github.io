@@ -56,7 +56,7 @@ function Home() {
                     <ExperienceEntry 
                         title='Honours Bachelor of Science' 
                         location='University of Toronto' 
-                        date='September 2016 - December 2020'>
+                        date='September 2016 - June 2021'>
                         <p>Computer Science Specialist Co-op (Software Engineering Stream)</p>
                         <p><b>cGPA:</b> 3.79/4.0</p>
                     </ExperienceEntry>
@@ -66,17 +66,18 @@ function Home() {
                 <div className='card-container skills-container'>
                     <div className='skill-list'>
                         {/* <h3>Programming</h3> */}
-                        <SkillEntry category='Programming Languages'>Java, JavaScript, Python, Haskell</SkillEntry>
-                        <SkillEntry category='Markup and Style Sheet'>HTML, CSS, XML </SkillEntry>
-                        <SkillEntry category='Web Development Frameworks'>React, Angular, jQuery, Node.js, Express.js </SkillEntry>
+                        <SkillEntry category='Programming Languages'>Java, JavaScript, TypeScript, Python, Haskell</SkillEntry>
+                        <SkillEntry category='Markup and Style Sheet'>HTML, CSS, SASS, XML </SkillEntry>
+                        <SkillEntry category='Web Development Frameworks'>React, jQuery, Node.js, Express.js </SkillEntry>
                         <SkillEntry category='Databases'>PostgreSQL, MongoDB </SkillEntry>
                         <SkillEntry category='Development Concepts'>Agile workflows (Scrum and Kanban), RESTful API, Responsive design </SkillEntry>
+                        <SkillEntry category='Development Platforms'>Firebase </SkillEntry>
                         <SkillEntry category='Version Control'>Git, SVN </SkillEntry>
 
                         {/* <h3>Software</h3> */}
                         <SkillEntry category='Microsoft Office'>Word, Excel, PowerPoint, Outlook </SkillEntry>
                         <SkillEntry category='Adobe Creative Cloud'>Photoshop, Illustrator, Animate, InDesign </SkillEntry>
-                        <SkillEntry category='Other'>Blender, Unity </SkillEntry>
+                        <SkillEntry category='Other'>Blender, Unity, Android Studio </SkillEntry>
                     </div>
                     
 
@@ -125,6 +126,24 @@ function Home() {
                 <h1 className='section-title'><i className="fas fa-tools"></i> Projects</h1>
                 <h2>Programming</h2>
                 <ProjectEntry 
+                    title='Twitter Clone (WIP)' 
+                    date='May 2021' 
+                    tools='React, Context API, TypeScript, Material UI, SASS, Firebase'
+                    githubLink=''
+                    url=''>
+                    <p>A social media app similar to Twitter.</p>
+                </ProjectEntry>
+                
+                <ProjectEntry 
+                    title='MERN Web Blog' 
+                    date='March 2021' 
+                    tools='React, Redux, Express, Node, MongoDB, SASS, JWT, Google OAuth'
+                    githubLink='https://github.com/tunadragon/mern-blog-app'
+                    url='https://web-gallery-blog.netlify.app'>
+                    <p>A blog app where users can sign in and create and like posts.</p>
+                </ProjectEntry>
+                
+                <ProjectEntry 
                     title='Personal Website' 
                     date='January 2021' 
                     tools='React, HTML, CSS, JavaScript, Git'
@@ -138,7 +157,7 @@ function Home() {
                     date='April 2020' 
                     tools='Angular, Three.js, NodeJs, GraphQL, Git'
                     githubLink=''
-                    url='https://www.architect3d.me'>
+                    url='https://youtu.be/eRZLqoqGybc'>
                     <p>A web app where users can collaboratively create and edit 3D scenes.</p>
                 </ProjectEntry>
 
